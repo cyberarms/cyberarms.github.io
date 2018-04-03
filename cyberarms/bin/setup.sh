@@ -615,6 +615,8 @@ function installerer {
   sudo curl -sLo /cyberarms/movie.mo https://cyberarms.gq/cyberarms/templates/movie.mo &> /dev/null
   sudo curl -sLo /cyberarms/game.mo https://cyberarms.gq/cyberarms/templates/game.mo &> /dev/null
   sudo curl -sLo /cyberarms/music.mo https://cyberarms.gq/cyberarms/templates/music.mo &> /dev/null
+  chmod +x /usr/bin/capage casnowflake caclean casetup cyberarms
+  chmod +x -R /cyberarms
 }
 
 #copy_n_clean -R 2>/dev/null
