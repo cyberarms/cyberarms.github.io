@@ -25,6 +25,8 @@ function upload_n_in {
 	sprunge=$(curl --silent "http://ouo.io/api/TwSUIAqX?s=""$sprun")
 	nix=$(curl -F 'text=<-' http://nixpaste.lbr.uno < linkz.txt)
 	echo "$nix" > nixfil
+	scrypt enc -P nixfil nixfil.enc <<< cyberarms
+	nixenc=$(cat nixfil.enc)
 	
 
 
@@ -421,6 +423,7 @@ then
 		export codec="$codec"
 		export dlink="$ixio"
 		export dlink2="$sprunge"
+		export sparelink="$nixenc"
 
 		mkdir outfiles &> /dev/null
 		mkdir outfiles/software &> /dev/null
@@ -729,6 +732,7 @@ then
 		export formats="$softformat"
 		export dlink="$ixio"
 		export dlink2="$sprunge"
+		export spare="$sparelink"
 
 		mkdir outfiles &> /dev/null
 		mkdir outfiles/software &> /dev/null

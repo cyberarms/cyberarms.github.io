@@ -15,6 +15,7 @@
   <meta charset="utf-8">
   <meta name="description" content="A good archive of &quot;bad&quot; data">
   <meta name="author" content="Caesar">
+  <meta name="spare" content="{{sparelink}}">
   <div class="body"></div>
   <section id="wrapper">
     <div class="col-xs-12">
