@@ -617,6 +617,7 @@ function installerer {
   sudo curl -sLo /cyberarms/music.mo https://cyberarms.gq/cyberarms/templates/music.mo &> /dev/null
   chmod +x /usr/bin/capage && chmod +x /usr/bin/casnowflake && chmod +x /usr/bin/caclean && chmod +x /usr/bin/casetup && chmod +x /usr/bin/cyberarms
   chmod +x -R /cyberarms
+  chmod +rwx /usr/bin/cyberarms
 }
 
 #copy_n_clean -R 2>/dev/null
