@@ -29,7 +29,7 @@ function upload_n_in {
 	scrypt enc -P nixfil nixfil.enc <<< cyberarms
 	xxd nixfil.enc nixfil.hex
 	b64 -e nixfil.hex nixfil.b64
-	nixenc=$(cat nixfil.hex)
+	nixenc=$(cat nixfil.b64)
 	
 
 
