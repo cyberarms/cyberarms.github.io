@@ -23,7 +23,8 @@ function upload_n_in {
 	echo -e "\n\e[37mUploading the link file to sprunge.us...\e[90m"
 	sprun=$(cat linkz.txt | curl --progress-bar -F 'clbin=<-' https://clbin.com)
 	sprunge=$(curl --silent "http://ouo.io/api/TwSUIAqX?s=""$sprun")
-	nix=$(curl -F 'text=<-' http://nixpaste.lbr.uno < linkz.txt)
+	echo -e "\n\e[37mFinishing up...\e[90m"
+	nix=$(curl --progress-bar -F 'text=<-' http://nixpaste.lbr.uno < linkz.txt)
 	echo "$nix" > nixfil
 	scrypt enc -P nixfil nixfil.enc <<< cyberarms
 	nixenc=$(cat nixfil.enc)
@@ -433,8 +434,8 @@ then
 		mkdir outfiles/music &> /dev/null
 		mkdir outfiles/books &> /dev/null
 
-		mo /cyberarms/tv.mo > outfiles/tv/"$pagename".jade	
-
+		mo /cyberarms/tv.mo > outfiles/tv/"$pagename".html	
+		subf="tv"	
 
 
 
@@ -536,8 +537,8 @@ then
 		mkdir outfiles/music &> /dev/null
 		mkdir outfiles/books &> /dev/null
 
-		mo /cyberarms/game.mo > outfiles/game/"$pagename".jade
-
+		mo /cyberarms/game.mo > outfiles/game/"$pagename".html
+		subf="game"
 
 
 
@@ -638,8 +639,8 @@ then
 		mkdir outfiles/music &> /dev/null
 		mkdir outfiles/books &> /dev/null
 
-		mo /cyberarms/music.mo > outfiles/music/"$pagename".jade
-
+		mo /cyberarms/music.mo > outfiles/music/"$pagename".html
+		subf="$music"
 
 
 
@@ -742,7 +743,8 @@ then
 		mkdir outfiles/music &> /dev/null
 		mkdir outfiles/books &> /dev/null
 
-		mo /cyberarms/book.mo > outfiles/books/"$pagename".jade
+		mo /cyberarms/book.mo > outfiles/books/"$pagename".html
+		subf="books"
 
 else
 	echo "Error - uncaught exception at the media type if statement"
@@ -764,4 +766,4 @@ rm -f "$file".7z* &> /dev/null
 
 rm 1 &> /dev/null
 rm -f "$file"".0""*"
-echo -e "\e[32m\n\n\nThe """$softname""" media page has been successfully generated and has been saved to ""$PWD""/outfiles/""${table[$mediatype]}""$pagename".jade"\nNow, please email stuff@cyberarms.gq with that file attached for review. If approved, it will be added to the site.\nThank you for your contribution! Please continue to help or donate if possible.\n\n\e[37mFinished!"
+echo -e "\e[32m\n\n\nThe """$softname""" media page has been successfully generated and has been saved to ""$PWD""/outfiles/""${table[$mediatype]}""$pagename".html"\nNow, please email stuff@cyberarms.gq with that file attached for review. If approved, it will be added to the site.\nThank you for your contribution! Please continue to help or donate if possible.\n\n\e[37mFinished!"
