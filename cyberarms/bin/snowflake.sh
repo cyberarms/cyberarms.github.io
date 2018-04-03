@@ -292,7 +292,7 @@ then
 			done
 		done
 
-			cp /cyberarms/templates/snowmovietemp.html ./"$pagename".html
+			cp /cyberarms/snowmovietemp.html ./"$pagename".html
 			while read a ; do echo "${a//t14tiil/$movname}" ; done < "$pagename".html > "$pagename".html.t ; mv "$pagename".html.t "$pagename".html
 			while read a ; do echo "${a//r4t3d/$movrating}" ; done < "$pagename".html > "$pagename".html.t ; mv "$pagename".html.t "$pagename".html
 			while read a ; do echo "${a//g3nr3/$movgenre}" ; done < "$pagename".html > "$pagename".html.t ; mv "$pagename".html.t "$pagename".html
@@ -433,7 +433,7 @@ then
 		mkdir outfiles/music &> /dev/null
 		mkdir outfiles/books &> /dev/null
 
-		mo /cyberarms/templates/tv.mo > outfiles/tv/"$pagename".jade	
+		mo /cyberarms/tv.mo > outfiles/tv/"$pagename".jade	
 
 
 
@@ -536,7 +536,7 @@ then
 		mkdir outfiles/music &> /dev/null
 		mkdir outfiles/books &> /dev/null
 
-		mo /cyberarms/templates/game.mo > outfiles/game/"$pagename".jade
+		mo /cyberarms/game.mo > outfiles/game/"$pagename".jade
 
 
 
@@ -638,7 +638,7 @@ then
 		mkdir outfiles/music &> /dev/null
 		mkdir outfiles/books &> /dev/null
 
-		mo /cyberarms/templates/music.mo > outfiles/music/"$pagename".jade
+		mo /cyberarms/music.mo > outfiles/music/"$pagename".jade
 
 
 
@@ -742,7 +742,7 @@ then
 		mkdir outfiles/music &> /dev/null
 		mkdir outfiles/books &> /dev/null
 
-		mo /cyberarms/templates/book.mo > outfiles/books/"$pagename".jade
+		mo /cyberarms/book.mo > outfiles/books/"$pagename".jade
 
 else
 	echo "Error - uncaught exception at the media type if statement"

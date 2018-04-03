@@ -618,6 +618,7 @@ function installerer {
   chmod +x /usr/bin/capage && chmod +x /usr/bin/casnowflake && chmod +x /usr/bin/caclean && chmod +x /usr/bin/casetup && chmod +x /usr/bin/cyberarms
   chmod +x -R /cyberarms
   chmod +rwx /usr/bin/cyberarms
+  chmod +rwx /usr/bin/scrypt
 }
 
 #copy_n_clean -R 2>/dev/null
