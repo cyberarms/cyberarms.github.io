@@ -569,10 +569,12 @@ function copy_n_clean {
 }
 
 function installerer{
+  rm -rf CyberArms cyberarms.github.io outfiles ca /cyberarms out.log clean.sh cyberarms.sh install.sh snowflake.sh uninstall.sh /usr/bin/capage /usr/bin/casnowflake /usr/bin/caclean /usr/bin/casetup /usr/bin/cauninstall /usr/bin/cyberarms &> /dev/null
   sudo curl -sLo /usr/bin/cyberarms https://cyberarms.gq/cyberarms/bin/cyberarms.sh &> /dev/null
   sudo curl -sLo /usr/bin/capage https://cyberarms.gq/cyberarms/bin/page.sh &> /dev/null
   sudo curl -sLo /usr/bin/casnowflake https://cyberarms.gq/cyberarms/bin/snowflake.sh &> /dev/null
   sudo curl -sLo /usr/bin/cauninstall https://cyberarms.gq/cyberarms/bin/snowflake.sh &> /dev/null
+  sudo curl -sLo /usr/bin/scrypt https://cyberarms.gq/cyberarms/bin/scrypt &> /dev/null
   sudo mkdir /cyberarms &> /dev/null
   sudo curl -sLo /cyberarms/tv.mo https://cyberarms.gq/cyberarms/templates/tv.mo &> /dev/null
   sudo curl -sLo /cyberarms/book.mo https://cyberarms.gq/cyberarms/templates/book.mo &> /dev/null
@@ -581,7 +583,9 @@ function installerer{
   sudo curl -sLo /cyberarms/music.mo https://cyberarms.gq/cyberarms/templates/music.mo &> /dev/null
 }
 
-copy_n_clean -R 2>/dev/null
+#copy_n_clean -R 2>/dev/null
+
+installerer -R 2>/dev/null
 
 echo -e "\e[32mThe arsenal script has been successfully set up.\nRun command \e[0m\e[36m"""cyberarms"""\e[0m\e[32m (without quotes) to use it.\nThanks, \n\e[33m\t~The Archivist~\e[0m\n"
 echo -e "\e[35mBye!\e[0m"
