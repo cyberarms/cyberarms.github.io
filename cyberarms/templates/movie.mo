@@ -55,9 +55,6 @@
         <div class="page-header">
           <h1 class="stuff16">{{title}}</h1>
           <hr>
-          <h1 class="stuff16">Season {{season}}</h1>
-          <hr>
-          <hr>
           <h2 class="stuff24">{{description}}</h2>
           <hr>
           <h3 class="stuff24"><a href="{{url}}" style="text-decoration:underline">Buy here</a></h3>
