@@ -561,7 +561,7 @@ else
         else
           brew install expect
         fi
-        
+
         echo -e "\e[0m"        
       fi
 
@@ -602,7 +602,7 @@ function copy_n_clean {
   cp -r cyberarms.github.io /cyberarms
 }
 
-function installerer{
+function installerer {
   rm -rf CyberArms cyberarms.github.io outfiles ca /cyberarms out.log clean.sh cyberarms.sh install.sh snowflake.sh uninstall.sh /usr/bin/capage /usr/bin/casnowflake /usr/bin/caclean /usr/bin/casetup /usr/bin/cauninstall /usr/bin/cyberarms &> /dev/null
   sudo curl -sLo /usr/bin/cyberarms https://cyberarms.gq/cyberarms/bin/cyberarms.sh &> /dev/null
   sudo curl -sLo /usr/bin/capage https://cyberarms.gq/cyberarms/bin/page.sh &> /dev/null

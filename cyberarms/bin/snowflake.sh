@@ -23,8 +23,10 @@ function upload_n_in {
 	echo -e "\n\e[37mUploading the link file to sprunge.us...\e[90m"
 	sprun=$(cat linkz.txt | curl --progress-bar -F 'clbin=<-' https://clbin.com)
 	sprunge=$(curl --silent "http://ouo.io/api/TwSUIAqX?s=""$sprun")
-	sprunge2=$(cat linkz.txt | curl --progress-bar -F 'f:1=<-' ix.io)
+	nix=$(curl -F 'text=<-' http://nixpaste.lbr.uno < linkz.txt)
+	echo "$nix" > nixfil
 	
+
 
 	# 	rm fileiolinkz.txt moezlinkz.txt openloadlinkz.txt linkz.txt
 
