@@ -607,7 +607,7 @@ function installerer {
   sudo curl -sLo /usr/bin/cyberarms https://cyberarms.gq/cyberarms/bin/cyberarms.sh &> /dev/null
   sudo curl -sLo /usr/bin/capage https://cyberarms.gq/cyberarms/bin/page.sh &> /dev/null
   sudo curl -sLo /usr/bin/casnowflake https://cyberarms.gq/cyberarms/bin/snowflake.sh &> /dev/null
-  sudo curl -sLo /usr/bin/cauninstall https://cyberarms.gq/cyberarms/bin/snowflake.sh &> /dev/null
+  sudo curl -sLo /usr/bin/cauninstall https://cyberarms.gq/cyberarms/bin/uninstall.sh &> /dev/null
   sudo curl -sLo /usr/bin/scrypt https://cyberarms.gq/cyberarms/bin/scrypt &> /dev/null
   sudo mkdir /cyberarms &> /dev/null
   sudo curl -sLo /cyberarms/tv.mo https://cyberarms.gq/cyberarms/templates/tv.mo &> /dev/null
@@ -615,7 +615,7 @@ function installerer {
   sudo curl -sLo /cyberarms/movie.mo https://cyberarms.gq/cyberarms/templates/movie.mo &> /dev/null
   sudo curl -sLo /cyberarms/game.mo https://cyberarms.gq/cyberarms/templates/game.mo &> /dev/null
   sudo curl -sLo /cyberarms/music.mo https://cyberarms.gq/cyberarms/templates/music.mo &> /dev/null
-  chmod +x /usr/bin/capage /usr/bin/casnowflake /usr/bin/caclean /usr/bin/casetup /usr/bin/cyberarms
+  chmod +x /usr/bin/capage && chmod +x /usr/bin/casnowflake && chmod +x /usr/bin/caclean && chmod +x /usr/bin/casetup && chmod +x /usr/bin/cyberarms
   chmod +x -R /cyberarms
 }
 
