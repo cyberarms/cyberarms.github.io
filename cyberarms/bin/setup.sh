@@ -41,6 +41,8 @@ git=$(program_is_installed git)
 
 mo=$(program_is_installed mo)
 
+expect=$(program_is_installed expect)
+
 uname=$(uname -s)
 
 if [ "$uname" = "Darwin*" ]; then
@@ -79,6 +81,12 @@ if [ "$uname" = "Darwin*" ]; then
       :
     else
       echo -e "\e[31mmo\e[0m\n\n"
+    fi
+
+    if [ "$expect" = 0 ]; then
+      :
+    else
+      echo -e "\e[31mexpect\e[0m\n\n"
     fi
 
     #Try to install missing packages
@@ -136,6 +144,12 @@ if [ "$uname" = "Darwin*" ]; then
           mv mo /usr/bin/mo
         fi
 
+        if [ "$expect" = 0 ]; then
+          :
+        else
+          brew install expect < /dev/null
+        fi
+
         echo -e "\e[0m"
 
     else
@@ -182,6 +196,12 @@ else
       :
     else
       echo -e "\e[31mmo\e[0m\n"
+    fi
+
+    if [ "$expect" = 1 ]; then
+      :
+    else
+      echo -e "\e[31mexpect\e[0m\n"
     fi
 
     #Try to install missing packages
@@ -244,6 +264,13 @@ else
           chmod +x mo
           mv mo /usr/bin/mo
         fi
+
+        if [ "$expect" = 1 ]; then
+          :
+        else
+          sudo apt-get install -y expect
+        fi
+
         echo -e "\e[0m"
       else
 
@@ -528,6 +555,13 @@ else
           chmod +x mo
           mv mo /usr/bin/mo
         fi
+
+        if [ "$expect" = 0 ]; then
+          :
+        else
+          brew install expect
+        fi
+        
         echo -e "\e[0m"        
       fi
 
