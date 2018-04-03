@@ -186,6 +186,12 @@ table[3]="Game"
 table[4]="Music"
 table[5]="Book"
 
+tab2[1]="movies"
+tab2[2]="tv"
+tab2[3]="games"
+tab2[4]="music"
+tab2[5]="books"
+
 echo -e "\e[97mWelcome to the CyberArms page generation script!\nThis script automates the creation of new \e[36mmedia\e[97m pages and the uploading/shortlinking of the files.\nFor more info, please see the site at \e[36mhttp://cyberarms.gq\e[97m.\nThis script is copyright 2017 The Archivist and the CyberArms Project.\n"
 
 echo -e "\e[93mAvailable media types:\n\n\t\e[32m1.\e[93m Movie\n\t\e[33m2.\e[93m TV Show\n\t\e[34m3.\e[93m Game\n\t\e[35m4.\e[93m Music\n\t\e[36m5.\e[93m Book\n\nPlease enter your selection (\e[32m1\e[93m, \e[33m2\e[93m, \e[34m3\e[93m, \e[35m4\e[93m, or \e[36m5\e[93m):\e[33m"	
@@ -252,19 +258,19 @@ then
 
 
 
-		echo -e "\e[33mPlease enter the movie title, e.g. Suicide Squad.\e[33m"
+		echo -e "\e[93mPlease enter the movie title.\e[33m"
 		read movname
-		echo -e "\e[33mPlease enter the movie's rating.\e[33m"
+		echo -e "\e[93mPlease enter the movie's rating.\e[33m"
 		read movrating
-		echo -e "\e[33mPlease enter the movie's genre."
+		echo -e "\e[93mPlease enter the movie's genre.\e[33m"
 		read movgenre
-		echo -e "\e[33mPlease enter the IMDB page url of the movie (be sure to include the http(s) prefix)."
+		echo -e "\e[93mPlease enter the IMDB page url of the movie (be sure to include the http(s) prefix).\e[33m"
 		read movurl
-		echo -e "\e[33mPlease enter a file name for the web page. Rules:\n\n\t1. It should be one-worded\n\t2. It should have no spaces\n\t3. It should have no special characters or capital letters.\n\nExample: gots07e07 for Game of Thrones Season 7 Episode 7, suicidesquad for Suicide Squad.\e[33m"
+		echo -e "\e[93mPlease enter a file name for the web page. Rules:\n\n\t1. It should be one-worded\n\t2. It should have no spaces\n\t3. It should have no special characters or capital letters.\n\nExample: gots07e07 for Game of Thrones Season 7 Episode 7, suicidesquad for Suicide Squad.\e[33m"
 		read pagename
-		echo -e "\e[33mPlease enter the codec used to encode the movie, i.e. h.265"
+		echo -e "\e[93mPlease enter the codec used to encode the movie, e.g. HEVC\e[33m"
 		read movcodec
-		echo -e "\nAre these details correct?\n\n\t\e[33m$movname\n\t$movrating\n\t$movgenre\n\t$movurl\n\t$movcodec\n\t$pagename\n\e[93m\n(y\\3\bn): "
+		echo -e "\e[93m\nAre these details correct?\n\n\t\e[33m$movname\n\t$movrating\n\t$movgenre\n\t$movurl\n\t$movcodec\n\t$pagename\n\e[93m\n(y\\3\bn): \e[33m\n"
 		read correct
 		while [[ "$correct" != "y" && "$correct" != "n" ]]
 		do
@@ -273,24 +279,23 @@ then
 		done
 		while [ "$correct" != "y" ]
 		do
-			echo -e "\e[33mPlease enter the movie title, e.g. Suicide Squad.\e[33m"
+			echo -e "\e[93mPlease enter the movie title.\e[33m"
 			read movname
-			echo -e "\e[33mPlease enter the movie's rating.\e[33m"
+			echo -e "\e[93mPlease enter the movie's rating.\e[33m"
 			read movrating
-			echo -e "\e[33mPlease enter the movie's genre."
+			echo -e "\e[93mPlease enter the movie's genre.\e[33m"
 			read movgenre
-			echo -e "\e[33mPlease enter the IMDB page url of the movie (be sure to include the http(s) prefix)."
+			echo -e "\e[93mPlease enter the IMDB page url of the movie (be sure to include the http(s) prefix).\e[33m"
 			read movurl
-			echo -e "\e[33mPlease enter a file name for the web page. Rules:\n\n\t1. It should be one-worded\n\t2. It should have no spaces\n\t3. It should have no special characters or capital letters.\n\nExample: gots07e07 for Game of Thrones Season 7 Episode 7, suicidesquad for Suicide Squad.\e[33m"
+			echo -e "\e[93mPlease enter a file name for the web page. Rules:\n\n\t1. It should be one-worded\n\t2. It should have no spaces\n\t3. It should have no special characters or capital letters.\n\nExample: gots07e07 for Game of Thrones Season 7 Episode 7, suicidesquad for Suicide Squad.\e[33m"
 			read pagename
-			echo -e "\e[33mPlease enter the codec used to encode the movie, e.g. HEVC"
+			echo -e "\e[93mPlease enter the codec used to encode the movie, e.g. HEVC\e[33m"
 			read movcodec
-			echo -e "\nAre these details correct?\n\n\t\e[33m$movname\n\t$movrating\n\t$movgenre\n\t$movurl\n\t$movcodec\n\t$pagename\n"
-			echo -e  "\e[93m\n(y\\3\bn): "
+			echo -e "\e[93m\nAre these details correct?\n\n\t\e[33m$movname\n\t$movrating\n\t$movgenre\n\t$movurl\n\t$movcodec\n\t$pagename\n\e[93m\n(y\\3\bn): \e[33m\n"
 			read correct
 			while [[ "$correct" != "y" && "$correct" != "n" ]]
 			do
-				echo -e "\e[31mInvalid input!\nAre these details correct?\n\n\t\e[33m$movname\n\t$movrating\n\t$movgenre\n\t$movurl\n\t$movcodec\n\t$pagename\n\e[93m\n(y\\3\bn): "
+				echo -e "\e[31mInvalid input!\nAre these details correct?\n\n\t\e[33m$movname\n\t$movrating\n\t$movgenre\n\t$movurl\n\t$movcodec\n\t$pagename\n\e[93m\n(y\\3\bn): \e[33m\n"
 				read correct
 			done
 		done
@@ -768,4 +773,4 @@ rm -f "$file".7z* &> /dev/null
 
 rm 1 &> /dev/null
 rm -f "$file"".0""*"
-echo -e "\e[32m\n\n\nThe """$softname""" media page has been successfully generated and has been saved to ""$PWD""/outfiles/""${table[$mediatype]}""$pagename".html"\nNow, please email stuff@cyberarms.gq with that file attached for review. If approved, it will be added to the site.\nThank you for your contribution! Please continue to help or donate if possible.\n\n\e[37mFinished!"
+echo -e "\e[32m\n\n\nThe """$softname""" media page has been successfully generated and has been saved to ""$PWD""/outfiles/""${tab2[$mediatype]}""$pagename".html"\nNow, please email stuff@cyberarms.gq with that file attached for review. If approved, it will be added to the site.\nThank you for your contribution! Please continue to help or donate if possible.\n\n\e[37mFinished!"

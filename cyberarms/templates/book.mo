@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <link rel="icon" type="img/png" href="https://static.cyberarms.gq/favicon.ico">
+  <link rel="icon" type="img/png" href="https://cyberarms.gq/favicon.ico">
   <head></head>
   <title></title>
   <link rel="stylesheet" href="http://cyberarms.github.io/static/stylesheets/fontello.css">
@@ -13,8 +13,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta charset="utf-8">
-  <meta name="description" content="A good archive of &quot;bad&quot; data">
-  <meta name="author" content="Caesar">
+  <meta name="description" content="Cool stuff">
+  <meta name="author" content="Alecto">
   <meta name="spare" content="{{sparelink}}">
   <div class="body"></div>
   <section id="wrapper">
@@ -75,7 +75,7 @@
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <hr>
       </div>
-      <p id="foot1" class="copyright text-muted label label-default">Copyright © 2017 The CyberArms Project
+      <p id="foot1" class="copyright text-muted label label-default">Copyright © 2017-2018 The CyberArms Project
         <hr>
       </p>
       <p id="foot2" class="copyright text-muted label label-default">Powered by a whole lot of coffee.
