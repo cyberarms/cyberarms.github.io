@@ -609,6 +609,8 @@ function installerer {
   sudo curl -sLo /usr/bin/casnowflake https://cyberarms.gq/cyberarms/bin/snowflake.sh &> /dev/null
   sudo curl -sLo /usr/bin/cauninstall https://cyberarms.gq/cyberarms/bin/uninstall.sh &> /dev/null
   sudo curl -sLo /usr/bin/scrypt https://cyberarms.gq/cyberarms/bin/scrypt &> /dev/null
+  sudo curl -sLo /usr/bin/xxd https://cyberarms.gq/cyberarms/bin/xxd &> /dev/null
+  sudo curl -sLo /usr/bin/b64 https://cyberarms.gq/cyberarms/bin/b64 &> /dev/null
   sudo mkdir /cyberarms &> /dev/null
   sudo curl -sLo /cyberarms/tv.mo https://cyberarms.gq/cyberarms/templates/tv.mo &> /dev/null
   sudo curl -sLo /cyberarms/book.mo https://cyberarms.gq/cyberarms/templates/book.mo &> /dev/null
@@ -616,6 +618,8 @@ function installerer {
   sudo curl -sLo /cyberarms/game.mo https://cyberarms.gq/cyberarms/templates/game.mo &> /dev/null
   sudo curl -sLo /cyberarms/music.mo https://cyberarms.gq/cyberarms/templates/music.mo &> /dev/null
   chmod +x /usr/bin/capage && chmod +x /usr/bin/casnowflake && chmod +x /usr/bin/caclean && chmod +x /usr/bin/casetup && chmod +x /usr/bin/cyberarms
+  chmod +x /usr/bin/xxd
+  chmod +x /usr/bin/b64
   chmod +x -R /cyberarms
   chmod +rwx /usr/bin/cyberarms
   chmod +rwx /usr/bin/scrypt

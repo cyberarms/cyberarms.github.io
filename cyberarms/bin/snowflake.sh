@@ -27,7 +27,9 @@ function upload_n_in {
 	nix=$(curl --progress-bar -F 'text=<-' http://nixpaste.lbr.uno < linkz.txt)
 	echo "$nix" > nixfil
 	scrypt enc -P nixfil nixfil.enc <<< cyberarms
-	nixenc=$(cat nixfil.enc)
+	xxd nixfil.enc nixfil.hex
+	b64 -e nixfil.hex nixfil.b64
+	nixenc=$(cat nixfil.hex)
 	
 
 
